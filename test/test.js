@@ -1,12 +1,11 @@
-var bin = require('../');
+const path = require('path');
+const html2svg = require('../index');
 
-bin({
-    apiKey: 'ClOXSfzsI7yL9ywbVUBg8r1BXySYHrkzffBOaNRWvsIxeWOUekA8ll7OwIwS6MQTx6O-uTYw6P5QR4wOAUDNdQ',
-    html: '/Users/gaofeng/work/html2svg/test/documents/button.html',
-    needDownload: true,
-    output: './out.svg'
-}).then(data => {
-    console.log(data);
+const input = 'file://' + path.join(__dirname, './documents/button.html');
+const output = path.join(__dirname, './output.svg');
+
+html2svg({input, output}).then(res => {
+    console.log(res);
 }).catch(err => {
     console.error(err);
 });
