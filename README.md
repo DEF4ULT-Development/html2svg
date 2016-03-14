@@ -1,4 +1,4 @@
-![](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)
+[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
 
 ## html2svg convertor
 
@@ -61,8 +61,3 @@ const output = '/root/path/file.ext';
 ## Support
 
 Please [open an issue](https://github.com/MrPeak/html2svg/issues/new) for support.
-
-
-
-
-
