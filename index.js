@@ -3,26 +3,21 @@ const convert = require('./lib/convert');
 module.exports = function(options) {
     var input = options.input;
     var output = options.output;
-    var apiKey = options.apiKey;
-    var needDownload = options.needDownload;
 
-    if (!html) {
+    if (!input) {
         throw new Error('Please set the input filename');
     }
 
-    if (needDownload && !output) {
-        throw new Error('Please set the output path with file\'s name');
+    if (!output) {
+        throw new Error('Please set the output filename');
     }
 
-    if (!apiKey) {
-        throw new Error('Please provide API Key');
-    }
+    return convert(input, output).then(res => {
+        if (+res.childProcess.exitCode !== 0 || res.stderr.indexOf('Done') === -1) {
+            throw new Error(res.stderr || 'Error occurred!');
+        }
 
-    return convert({
-        input,
-        output,
-        apiKey,
-        needDownload
+        return res.stderr;
     });
 
 };

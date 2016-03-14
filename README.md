@@ -1,8 +1,6 @@
 ## html2svg convertor
 
-An essy-used wrapper for [cloud-convert](https://cloudconvert.com/api).
-
-Before using it, you need apply an [API](https://cloudconvert.com/pricing) for cloud service.
+An essy-used Nodejs wrapper for [webvector](http://cssbox.sourceforge.net/webvector/).
 
 ## Installation
 
@@ -20,13 +18,11 @@ $ npm install html2svg
 ```javascript
 
 const html2svg = require('html2svg');
+const input = 'file:///root/path/file.ext'; // Or: http://google.com
+const output = '/root/path/file.ext';
 
-html2svg({
-    apiKey: 'xxxxx',
-    input: '/root/path/file.ext',
-    needDownload: false
-}).then(downloadUrl => {
-    return console.log(downloadUrl); // return svg download url
+html2svg({input, output}).then(res => {
+    console.log(res);
 }).catch(err => {
     console.error(err);
 });
@@ -37,15 +33,14 @@ html2svg({
 
 ```javascript
 const html2svg = require('html2svg');
+const input = 'file:///root/path/file.ext'; // Or: http://google.com
+const output = '/root/path/file.ext';
 
 (async function() {
 
   try {
-    var res = await html2svg({
-      apiKey: 'xxxxx',
-      input: '/root/path/file.ext',
-      needDownload: false
-    })
+    let res = await html2svg({input, output});
+
     console.log(res);
   } catch(err) {
     console.error(err)
@@ -57,14 +52,9 @@ const html2svg = require('html2svg');
 
 | Param | Description | required | default | tip |
 |---|---|---|---|---|
-| apiKey | A key apply on [cloudconvert](https://cloudconvert.com/pricing) | true  | null  | - |
-| input  |  Input path with file name | true  | null  | - |
-| needDownload  | Download option | false  | false  | If you want to download svg file, set it true. Otherwise, it will return download url.  |
-| output  | Ouput path with file name | false |  null  | If needDownload option is true, this option must be provided |
+| input  |  Input path | true  | null  | The path must contain protocol, such as 'http://', 'file://'. |
+| output  | Ouput path with file name | true |  null  | - |
 
-## Tips
-
-- You need write style-sheet code inline HTML document to perform svg image better.
 
 ## Support
 
