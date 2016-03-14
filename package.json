@@ -1,0 +1,25 @@
+{
+  "name": "html2svg",
+  "version": "0.0.1",
+  "description": "A module which can convert HTML document to svg file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:artascope/html2svg.git"
+  },
+  "keywords": [
+    "html",
+    "svg",
+    "node",
+    "cloudconvert"
+  ],
+  "author": "gaofeng.gf",
+  "license": "ISC",
+  "dependencies": {
+    "cloudconvert": "^1.1.1",
+    "request": "^2.69.0"
+  }
+}
