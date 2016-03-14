@@ -8,7 +8,7 @@ const html2svg = require('../index');
 coMocha(mocha);
 
 describe('Test base features.', function() {
-    this.timeout(10000);
+    this.timeout(20000);
 
     const input = 'file://' + path.join(__dirname, './documents/button.html');
     const output = path.join(__dirname, './svgs/button.svg');
