@@ -1,10 +1,10 @@
 {
   "name": "html2svg",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A module which can convert HTML document to svg file.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/index.js"
   },
   "repository": {
     "type": "git",
@@ -13,16 +13,20 @@
   "keywords": [
     "html",
     "svg",
-    "node",
-    "cloudconvert"
+    "node"
   ],
   "author": "mrpeak",
   "license": "ISC",
+  "engines": {
+    "node": ">=4.3.0"
+  },
   "dependencies": {
     "child-process-promise": "^1.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "co-fs": "^1.2.0",
+    "co-mocha": "^1.1.2",
     "mocha": "^2.4.5"
   }
 }
