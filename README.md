@@ -10,7 +10,7 @@ Available on NPM as fetch.
 
 ```bash
 
-$ tnpm install html2svg
+$ npm install html2svg
 
 ```
 
@@ -68,7 +68,7 @@ const html2svg = require('html2svg');
 
 ## Support
 
-Please [open an issue](https://github.com/fraction/readme-boilerplate/issues/new) for support.
+Please [open an issue](https://github.com/MrPeak/html2svg/issues/new) for support.
 
 
 
