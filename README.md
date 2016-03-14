@@ -1,3 +1,5 @@
+![](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)
+
 ## html2svg convertor
 
 An essy-used Nodejs wrapper for [webvector](http://cssbox.sourceforge.net/webvector/).
