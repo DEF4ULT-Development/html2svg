@@ -17,7 +17,7 @@ module.exports = function(options) {
             throw new Error(res.stderr || 'Error occurred!');
         }
 
-        return res.stderr;
+        return output;
     });
 
 };

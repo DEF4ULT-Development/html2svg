@@ -1,6 +1,6 @@
 {
   "name": "html2svg",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A module which can convert HTML document to svg file.",
   "main": "index.js",
   "scripts": {
