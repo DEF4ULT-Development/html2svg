@@ -10,7 +10,7 @@ coMocha(mocha);
 describe('Test base features.', function() {
     this.timeout(20000);
 
-    const input = 'file://' + path.join(__dirname, './documents/button.html');
+    const input = path.join(__dirname, './documents/button.html');
     const output = path.join(__dirname, './svgs/button.svg');
 
     it('Should generate a svg file in "output" path.', function* () {

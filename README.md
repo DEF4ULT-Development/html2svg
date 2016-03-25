@@ -2,7 +2,9 @@
 
 ## html2svg convertor
 
-An essy-used Nodejs wrapper for [webvector](http://cssbox.sourceforge.net/webvector/).
+A converter which could convert HTML document to SVG image.
+
+Even if a JS-Rendered HTML!
 
 ## Installation
 
@@ -22,8 +24,9 @@ $ npm install html2svg
 const html2svg = require('html2svg');
 const input = 'file:///root/path/file.ext'; // Or: http://google.com
 const output = '/root/path/file.ext';
+const needJSRender = true;
 
-html2svg({input, output}).then(res => {
+html2svg({input, output, needJSRender}).then(res => {
     console.log(res);
 }).catch(err => {
     console.error(err);
@@ -54,8 +57,9 @@ const output = '/root/path/file.ext';
 
 | Param | Description | required | default | tip |
 |---|---|---|---|---|
-| input  |  Input path | true  | null  | The path must contain protocol, such as 'http://', 'file://'. |
-| output  | Ouput path with file name | true |  null  | - |
+| input  |  Input path. | true  | null  | File URIs or HTTP URIs |
+| output  | Ouput path with file name. | true |  null  | - |
+| needJSRender | Tell it whether process JS Rendering or not. | false |  null  | - |
 
 
 ## Support

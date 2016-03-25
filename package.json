@@ -1,6 +1,6 @@
 {
   "name": "html2svg",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A module which can convert HTML document to svg file.",
   "main": "index.js",
   "scripts": {
@@ -21,12 +21,16 @@
     "node": ">=4.3.0"
   },
   "dependencies": {
-    "child-process-promise": "^1.1.0"
+    "child-process-promise": "^1.1.0",
+    "co": "^4.6.0",
+    "rmdir": "^1.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "co-fs": "^1.2.0",
     "co-mocha": "^1.1.2",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "cheerio": "^0.20.0",
+    "phantom": "^2.0.9"
   }
 }
