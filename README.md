@@ -1,6 +1,6 @@
 [![Build Status](https://api.travis-ci.org/MrPeak/html2svg.svg?branch=master)](https://travis-ci.org/travis-ci/travis-web)
 
-## html2svg convertor
+## html2svg convertor （Deprecated! Wait for new version，which engine is written by pure-js）
 
 A converter which could convert HTML document to SVG image.
 
